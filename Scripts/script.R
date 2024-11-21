@@ -24,5 +24,8 @@ dataset_vendas <- data.frame(
   Quantidade = sample(1:5,qtd_registros, replace = TRUE),
   Preço = round(runif(qtd_registros, min = 50, max = 200), 2)
 )
+# Criando uma pasta para salvar o arquivo
+dir.create("./Datas", recursive = TRUE)
+
 # Salvando o Dataset em um arquivo CSV
-write.csv(dataset_vendas, "../Datas/dataset_vendas.csv", row.names = FALSE)
+write.csv(dataset_vendas, "./Datas/dataset_vendas.csv", row.names = FALSE)
