@@ -25,4 +25,4 @@ dataset_vendas <- data.frame(
   Preço = round(runif(qtd_registros, min = 50, max = 200), 2)
 )
 # Salvando o Dataset em um arquivo CSV
-write.csv(dataset_vendas, "dataset_vendas.csv", row.names = FALSE)
+write.csv(dataset_vendas, "../Datas/dataset_vendas.csv", row.names = FALSE)
