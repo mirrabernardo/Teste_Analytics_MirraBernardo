@@ -1,6 +1,5 @@
-# PARTE 1: Criação de script para simular um dataset de vendas com 100 registros, contendo as colunas: ID, Data, Produto, Categoria, Quantidade, Preço. E período de 01/01/2023 a 31/12/2023.
-
-
+# PARTE 1: Criação de script para simular um dataset de vendas com 100 registros, contendo as colunas: ID, Data, Produto, Categoria, Quantidade, Preço. E período de 01/01/2023 a 31/12/2023
+# 
 # Definição de parâmentros 
 qtd_registros <- 100
 data_inicial <- as.Date("2023-01-01")
