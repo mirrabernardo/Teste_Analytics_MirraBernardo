@@ -6,7 +6,7 @@
 
 Este projeto foi desenvolvido utilizando o **renv** para gerenciamento de pacotes, garantindo que todas as dependências necessárias para a execução do código sejam instaladas e configuradas automaticamente.
 
-O arquivo `renv.lock` contém as versões exatas dos pacotes utilizados no projeto e o comando `renv::restore()` já foi adicionado aos scripts para instalar e restaurar as dependências.
+O arquivo `renv.lock` contém as versões exatas dos pacotes utilizados no projeto e o comando `renv::restore()` já foi adicionado ao script principal para instalar e restaurar as dependências.
 
 > É necessário que se tenha o **R** e o **RStudio** instalado na maquina.
 
@@ -17,7 +17,7 @@ O arquivo `renv.lock` contém as versões exatas dos pacotes utilizados no proje
 -   `Docs/`: Contém os arquivos de texto, incluindo o relatório final.
 -   `README.md`: Este arquivo de documentação.
 
-*demais arquivos são arquivos de configuração*
+*demais arquivos são arquivos de configuração, devem ser baixados juntamente com o projeto.*
 
 ## Solicitações do Projeto
 

@@ -1,5 +1,8 @@
 # PARTE 1: Criação de script para simular um dataset de vendas com 100 registros, contendo as colunas: ID, Data, Produto, Categoria, Quantidade, Preço. E período de 01/01/2023 a 31/12/2023
-# 
+#
+# Restauração do ambiente conforme o renv.lock
+renv::restore()
+
 # Definição de parâmentros 
 qtd_registros <- 100
 data_inicial <- as.Date("2023-01-01")
@@ -23,8 +26,6 @@ dataset_vendas <- data.frame(
   Quantidade = sample(1:5,qtd_registros, replace = TRUE),
   Preço = round(runif(qtd_registros, min = 50, max = 200), 2)
 )
-# Criando uma pasta para salvar o arquivo
-dir.create("./Datas", recursive = TRUE)
 
 # Salvando o Dataset em um arquivo CSV
 write.csv(dataset_vendas, "./Datas/dataset_vendas.csv", row.names = FALSE)
