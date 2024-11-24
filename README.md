@@ -55,13 +55,19 @@ O arquivo `renv.lock` contém as versões exatas dos pacotes utilizados no proje
     `tratamento_vendas.R`: script para tratamento e limpeza do dataset.\
     `analise_vendas.R`: script para a análise dos dados.\
     `vizualizacoes_vendas.R`: script para criação de vizualização/gráficos sobre os dados.\
+    `consultas_vendas.R`: script com consultas em SQL.\
     `consultas_sql.sql`: consultas em SQL para análise dos dados.
 
 ou
 
 -   **`Datas/`** **para leitura de dados.**\
     `dataset_vendas.csv`: dataset criado, sem tratamento e/ou limpeza.\
-    `data_clean.csv`: dataset tratado e limpo.
+    `data_clean.csv`: dataset tratado e limpo.\
+    `grafico1.png`: gráfico I.\
+    `grafico2.png`: gráfico II.\
+    `grafico3.png`: gráfico III.\
+    `grafico4.png`: gráfico IV.\
+    `grafico5.png`: gráfico V.
 
 ou
 
