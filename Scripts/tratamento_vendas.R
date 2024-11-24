@@ -11,10 +11,14 @@ instalar_carregar("tidyr")
 # Leitura do arquivo CSV e criação de uma variável com o dataset
 dataset_vendas <- read.csv("./Datas/dataset_vendas.csv")
 
+# Conversão dos tipos de dados
+dataset_vendas$Produto <- factor(dataset_vendas$Produto)
+dataset_vendas$Categoria <- factor(dataset_vendas$Categoria)
+dataset_vendas$Data <- as.Date(dataset_vendas$Data)
+
 # Correção dos valores das peças infantis no mês de outubro (SITUAÇÃO-PROBLEMA) - Favor verificar o arquivo ´contexto.md´
 dataset_vendas <- dataset_vendas %>%
   mutate(
-    Data = as.Date(Data),
     Preço = ifelse(Categoria == "Infantil" & month(Data) == 10, 50.00, Preço)
   )
 
@@ -25,13 +29,6 @@ dataset_vendas <- dataset_vendas %>%
 # Remoção de duplicatas
 dataset_vendas <- dataset_vendas %>%
   distinct()
-
-# Verificação dos tipos de dados
-summary(dataset_vendas)
-
-# Conversão dos tipos de dados para factors para melhorar a análise
-dataset_vendas$Produto <- factor(dataset_vendas$Produto)
-dataset_vendas$Categoria <- factor(dataset_vendas$Categoria)
 
 # Verificação dos tipos de dados - pós conversão
 dplyr::glimpse(dataset_vendas)

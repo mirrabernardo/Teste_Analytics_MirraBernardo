@@ -13,6 +13,8 @@ dataset_vendas <- read.csv("./Datas/data_clean.csv")
 dataset_vendas <- dataset_vendas %>%
   mutate(Preço_Total = Quantidade * Preço)
 
+
+
 # CÁLCULO DE PREÇO
 # Cálculo do total de vendas por produto
 total_vendas_por_produto <- dataset_vendas %>%
@@ -21,6 +23,17 @@ total_vendas_por_produto <- dataset_vendas %>%
   arrange(desc(Valor_Total_Vendas))
 
 produto_max_vendas <- total_vendas_por_produto[1, ] # Produto com maior venda total
+
+# Cálculo do preço médio dos produtos
+preco_medio_geral <- mean(dataset_vendas$Preço, na.rm = TRUE)
+
+# Cálculo do preço médio por produto dentro de cada categoria
+preco_medio_por_produto_categoria <- dataset_vendas %>%
+  group_by(Categoria, Produto) %>%
+  summarise(Preco_Medio = mean(Preço, na.rm = TRUE)) %>%
+  arrange(Categoria, desc(Preco_Medio))
+
+
 
 # CÁLCULO DE QUANTIDADES
 # Cálculo do total de quantidade vendida por produto
@@ -31,14 +44,21 @@ total_quantidade_por_produto <- dataset_vendas %>%
 
 produto_max_quantidade <- total_quantidade_por_produto[1, ] # Produto com maior quantidade vendida
 
-# Impressão de resultados
+
+
+# IMPRESSÃO DE RESULTADOS
 cat("O total de vendas por produto foi o seguinte:\n")
 print(total_vendas_por_produto)
 
 cat(sprintf(
-  "O produto %s teve o maior valor de vendas, totalizando R$ %.2f.\n",
+  "O produto %s teve o maior faturamento, totalizando R$ %.2f.\n",
   produto_max_vendas$Produto, produto_max_vendas$Valor_Total_Vendas
 ))
+
+cat(sprintf("O preço médio geral dos produtos é R$ %.2f.\n", preco_medio_geral))
+
+cat("O preço médio de cada produto por categoria é o seguinte:\n")
+print(preco_medio_por_produto_categoria)
 
 cat("O total de unidades vendidas por produto foi o seguinte:\n")
 print(total_quantidade_por_produto)
