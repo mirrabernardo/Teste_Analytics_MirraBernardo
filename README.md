@@ -73,9 +73,8 @@ ou
 
 -   **`Docs/` para leitura de documentos.**\
     `contexto.md`: contexto (situação-problema) criado sobre os dados.\
-    `relatorio_insights.md`: relatório final (solicitado).\
-    `relatorio.md`: relatório completo.
+    `relatorio_insights.md`: relatório final.
 
 ## Contato
 
-Se houver dúvidas, envie um e-mail para [mirrabernardo\@outlook.com](mailto:mirrabernardo@outlook.com)
+Se houver dúvidas, envie um e-mail para [mirrabernardo\@outlook.com](mailto:mirrabernardo@outlook.com).
