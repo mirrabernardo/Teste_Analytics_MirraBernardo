@@ -60,7 +60,7 @@ O arquivo `renv.lock` contém as versões exatas dos pacotes utilizados no proje
 
 ou
 
--   **`Datas/`** **para leitura de dados.**\
+-   **`Datas/` para leitura de dados.**\
     `dataset_vendas.csv`: dataset criado, sem tratamento e/ou limpeza.\
     `data_clean.csv`: dataset tratado e limpo.\
     `grafico1.png`: gráfico I.\
@@ -71,11 +71,11 @@ ou
 
 ou
 
--   **`Docs/`** **para leitura de documentos.\
-    **`contexto.md`: contexto (situação-problema) criado sobre os dados.\
+-   **`Docs/` para leitura de documentos.**\
+    `contexto.md`: contexto (situação-problema) criado sobre os dados.\
     `relatorio_insights.md`: relatório final.\
     `relatorio.md`: relatório completo.
 
 ## Contato
 
-Se houver dúvidas, envie um e-mail para [mirrabernardo\@outlook.com](mailto:mirrabernardo@outlook.com){.email}
+Se houver dúvidas, envie um e-mail para [mirrabernardo\@outlook.com](mailto:mirrabernardo@outlook.com)
