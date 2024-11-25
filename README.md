@@ -73,7 +73,7 @@ ou
 
 -   **`Docs/` para leitura de documentos.**\
     `contexto.md`: contexto (situação-problema) criado sobre os dados.\
-    `relatorio_insights.md`: relatório final.\
+    `relatorio_insights.md`: relatório final (solicitado).\
     `relatorio.md`: relatório completo.
 
 ## Contato
